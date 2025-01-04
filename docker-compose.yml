@@ -1,0 +1,17 @@
+services:
+  bd_sql:
+    image: mysql # Use a versão desejada, por exemplo, mysql:8.0
+    container_name: bd_sql
+    restart: always
+    command:
+      - --default_time_zone=America/Sao_Paulo
+    environment:
+      MYSQL_ROOT_PASSWORD: senha
+      MYSQL_DATABASE: base_de_dados
+      MYSQL_USER: usuario
+      MYSQL_PASSWORD: senha
+    volumes:
+      # - mysql_data:/var/lib/mysql
+      - ./mysql-config/my.cnf:/etc/mysql/my.cnf # Arquivo de configuração opcional
+    ports:
+      - "3306:3306"
