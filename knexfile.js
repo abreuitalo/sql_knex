@@ -4,11 +4,11 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 module.exports = {
-  client: "mysql1",
+  client: "mysql2",
   connection: {
     database: "base_de_dados",
     user: "usuario",
-    password: "senha1",
+    password: "senha",
   },
   pool: {
     min: 2,
