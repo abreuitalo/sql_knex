@@ -10,6 +10,7 @@ services:
       MYSQL_DATABASE: base_de_dados
       MYSQL_USER: usuario
       MYSQL_PASSWORD: senha
+      TZ: Ameria/Sao_Paulo
     volumes:
       # - mysql_data:/var/lib/mysql
       - ./mysql-config/my.cnf:/etc/mysql/my.cnf # Arquivo de configuração opcional
