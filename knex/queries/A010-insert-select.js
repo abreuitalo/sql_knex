@@ -30,4 +30,4 @@ const insert = knex(
 
 console.log(insert.toString());
 
-insert.then();
+insert.then().finally();
